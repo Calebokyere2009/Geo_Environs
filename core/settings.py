@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',       # Geospatial support
+    'rest_framework',           # API framework
+    'locations',     #Your app
 ]
 
 MIDDLEWARE = [

@@ -9,7 +9,8 @@ class LocationSerializer(serializers.ModelSerializer):
         model = Location
         fields = ['id', 'name', 'location', 'latitude', 'longitude']
 
-        def create(self, validated_data):
-            latitude = validated_data.pop('latitude')
-            longitude = validated_data.pop('longitude')
-            
+    def create(self, validated_data):
+        latitude = validated_data.pop('latitude')
+        longitude = validated_data.pop('longitude')
+        
+        point = Point(longitude,latitude)
